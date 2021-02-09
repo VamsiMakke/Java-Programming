@@ -1,5 +1,5 @@
 import java.util.*;
-class ExpNo3{
+class SavingsAccount{
     static double annualInterestRate = 0;
     private double savingsBalance;
     
