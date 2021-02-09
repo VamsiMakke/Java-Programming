@@ -1,7 +1,7 @@
 
 import java.io.*;
 
-class ExpNo4{
+class Book{
     private String bookName;
     private String isbnNumber;
     private String authorName;
@@ -65,7 +65,7 @@ class ExpNo4{
     
 }
 
-public class Main{
+public class ExpNo4{
          public static void main(String []args){
              Book BookTest[] = new Book[30];
              BookTest[0]= new Book("java","1006n79a","sample","sample2");
