@@ -62,8 +62,6 @@ public class ExpNo8 {
     public static void pWord() {
     	System.out.println("Enter Your Password");
         password = sc.next();
-
-
         String regex4 = "[A-Z a-z_.@0-9!#$%]+";
         if(password.length()>8) {
             if(password.matches(regex4)) {
@@ -86,7 +84,6 @@ public class ExpNo8 {
     	pNum();
     	pWord();
     }
-
     public static void main(String []args){
         userData();
     }
