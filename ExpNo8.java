@@ -7,8 +7,6 @@ public class ExpNo8 {
     static Scanner sc = new Scanner(System.in); 
     public static void uName() {
     	String regex = "[A-Z a-z _ 0-9]+";
-        
-
         System.out.println("Enter Your Name : ");
         userName = sc.nextLine();
         if(userName.length()>0) {
