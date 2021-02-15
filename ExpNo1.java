@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.Scanner;
-class ExpNo1{
+class Invoice{
         //Define instance variables here
         String number;
         String description;
@@ -71,7 +71,7 @@ class ExpNo1{
             System.out.println();
         }
 }
-public class Main{
+public class ExpNo1{
          public static void main(String []args){
                    Invoice myInvoice=new Invoice();
                    //Write your code here 
