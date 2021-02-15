@@ -20,12 +20,6 @@ public class Exp13
 		catch(ArithmeticException e){
 		    System.out.println("Arithmetic Exception Occured!");
 		}
-		
-		try{
-		    System.out.println("ENTER A INTEGER VALUE:");
-		    int x=sc.nextInt();
-		    
-		}
 		catch(InputMismatchException e1){
 		    System.out.println("InputMisMatchException Occured!");
 		}
