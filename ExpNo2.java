@@ -1,16 +1,18 @@
 import java.util.*;
-public class ExpNo2{
+public class Main{
     public static void main(String[]args){
         Scanner sc= new Scanner(System.in);
         int con_num = sc.nextInt();
         String con_name=sc.next();
-        double pre=sc.nextDouble();
-        double cur=sc.nextDouble();
+        double prev=sc.nextDouble();
+        double current=sc.nextDouble();
         String con=sc.next();
-        double diff=cur-pre;
+        double diff=current-prev;
         double amount;
         System.out.print("Amount: Rs.");
         String dom=new String("domestic");
+        String com=new String("commercial");
+        con=con.toLowerCase();
         if(con.equals(dom)==true)
             if(diff<=100){
                 amount=diff*1;
@@ -28,7 +30,7 @@ public class ExpNo2{
                 amount=1550+(diff-500)*6;
                 System.out.println(amount);
             }
-        else{
+        else if(con.equals(com)){
             if(diff<=100){
                 amount=diff*1;
                 System.out.println(amount);
@@ -46,5 +48,7 @@ public class ExpNo2{
                 System.out.println(amount);
             }
         }
+        else
+        System.out.println("INVALID INPUT!!");
     }
 }
