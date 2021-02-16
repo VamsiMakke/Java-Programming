@@ -9,19 +9,12 @@ public class ExpNo8 {
     	String regex = "[A-Za-z_0-9]+";
         System.out.println("Enter Your Name : ");
         userName = sc.nextLine();
-        if(userName.length()>0) {
-            if(userName.matches(regex)) {
+            if(userName.matches(regex)) 
                 System.out.println("Valid User Name");
-            }
             else {
                 System.out.println("Invalid User Name Please re enter");
                 uName();
             }
-        }
-        else {
-            System.out.println("User Name should have atleast 1 character Plz re enter");
-            uName();
-        }
     }
     public static void eMail() {
     	 System.out.println("Enter Your emailId");
