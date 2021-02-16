@@ -6,7 +6,7 @@ public class ExpNo8 {
     static String password ;
     static Scanner sc = new Scanner(System.in); 
     public static void uName() {
-    	String regex = "[A-Z a-z _ 0-9]+";
+    	String regex = "[A-Za-z_0-9]+";
         System.out.println("Enter Your Name : ");
         userName = sc.nextLine();
         if(userName.length()>0) {
@@ -26,8 +26,7 @@ public class ExpNo8 {
     public static void eMail() {
     	 System.out.println("Enter Your emailId");
          emailId = sc.nextLine();
-         String regex2 = "[A-Z a-z_.@0-9]+";
-         if(emailId.length()>10) {
+         String regex2 = "[A-Za-z_0-9]+[@]+[a-zA-z]+[.comnet]+";
              if(emailId.matches(regex2)) {
                  System.out.println("Valid emailId");
              }
@@ -36,11 +35,6 @@ public class ExpNo8 {
                  eMail();
              }
          }
-         else {
-             System.out.println("emailId should have atleast 10 character ");
-             eMail();
-         }
-    }
     public static void pNum() {
     	System.out.println("Enter Your Mobile Number");
         mobileNumber = sc.next();
@@ -62,9 +56,7 @@ public class ExpNo8 {
     public static void pWord() {
     	System.out.println("Enter Your Password");
         password = sc.next();
-        String regex4 = "[A-Z a-z_.@0-9!#$%]+";
         if(password.length()>8) {
-            if(password.matches(regex4)) {
                 System.out.println("Valid password");
                 System.out.println("------THANK YOU---------");
             }
@@ -72,19 +64,11 @@ public class ExpNo8 {
                 System.out.println("Invalid password Please re enter");
                 pWord();
             }
-        }
-        else {
-            System.out.println("password should have atleast 8 character ");
-            pWord();
-        }
     }
-    public static void userData(){
-    	uName();
+    public static void main(String []args){
+        uName();
     	eMail();
     	pNum();
     	pWord();
-    }
-    public static void main(String []args){
-        userData();
     }
 }
