@@ -1,0 +1,48 @@
+package demo;
+import java.util.Random;
+class A extends Thread{
+	public void run() {
+		Random r=new Random();
+		for(int i=0;i<10;i++) {
+			int x=r.nextInt(100);
+			if(x%2==0) {
+				B sq=new B(x);
+				sq.start();
+			}
+			else {
+				C cu=new C(x);
+				cu.start();
+			}
+			try {
+				Thread.sleep(1000);
+			}
+			catch(Exception e) {
+				System.out.println(e);
+			}
+		}
+	}
+}
+class B extends Thread{
+	int x;
+	public B(int x){
+		this.x=x;
+	}
+	public void run() {
+		System.out.println(x+"-"+x*x);
+			}
+}
+class C extends Thread{
+	int x;
+	public C(int x){
+		this.x=x;
+	}
+	public void run() {
+		System.out.println(x+"-"+x*x*x);
+			}
+}
+public class MultiThreading {
+	public static void main(String[]args) {
+		A a=new A();
+		a.start();
+	}
+}
